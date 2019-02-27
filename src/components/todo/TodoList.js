@@ -28,12 +28,12 @@ class TodoList extends Component {
     });
   };
 
-  eachTodoItem = (todo) => {
+  eachTodoItem = (todo, i) => {
     return ( 
-      <TodoItem key={todo.id} index={todo.id} 
+      <TodoItem key={i} index={i} 
                 updateTodoItem={this.updateTodoItem} 
                 deleteTodoItem={this.deleteTodoItem}>
-        {todo.todo}
+        {todo}
       </TodoItem>
     );
   };

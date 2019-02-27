@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 import TodoTitle from './TodoTitle';
-import TodoFooter from './TodoFooter';
 
 class Todo extends Component {
     constructor(props) {
@@ -16,7 +15,7 @@ class Todo extends Component {
       };
 
       addTodo = (value) => {
-        var arr = this.props.todos;
+        var arr = this.state.todos;
         arr.push(value)
         this.setState({
             todos: arr
@@ -37,7 +36,6 @@ class Todo extends Component {
                         < TodoList todos={this.state.todos}/>
                     </div>
                 </div>
-                {/* < TodoFooter todos={this.state.todos}/> */}
             </div>
         )
     }
